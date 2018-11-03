@@ -190,16 +190,11 @@ class Snapshot(OpenStack):
         '''Delete the snapshot from OpenStack'''
         self.api.volume.delete_snapshot(self.snapshot)
 
-        try:
-            self.wait_for_state(
-                state='error',
-                attempts=10,
-                succeed_on_error=True
-            )
-
-            return False
-        except openstack.exceptions.ResourceNotFound:
-            return True
+        return self.wait_for_state(
+            state='error',
+            attempts=10,
+            succeed_on_error=True
+        )
 
     @property
     def state(self):
