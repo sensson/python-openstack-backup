@@ -17,7 +17,7 @@ from sdk import Snapshot
 def main(args):
     # Set up the connection to OpenStack -- this is read from clouds.yaml
     openstack.enable_logging(debug=False)
-    api = openstack.connect(cloud='fuga')
+    api = openstack.connect(cloud=args.cloud)
 
     snapshot_id = args.snapshot
     server = args.volume
@@ -64,6 +64,12 @@ if __name__ == '__main__':
         required=True,
         help='',
         metavar=('<volume name>'),
+    )
+    parser.add_argument(
+        '--cloud',
+        help='',
+        metavar=('<cloud in clouds.yaml>'),
+        default='fuga',
     )
 
     args = parser.parse_args()

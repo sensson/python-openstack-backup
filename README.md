@@ -11,9 +11,7 @@ Read more about [crash consistent vs. application consistent](https://searchdata
 
 # Installation
 
-Configure your OpenStack cloud(s). The example is based on Fuga. Note that if
-you use a different name, both `snapshot.py` and `restore.py` needs to be
-changed too.
+Configure your OpenStack cloud(s). The example and default is based on Fuga.
 
 - Copy `clouds.yaml.example` to `clouds.yaml` and fill in your details.
 - Copy `secure.yaml.example` to `secure.yaml` and fill in your password.

@@ -16,7 +16,7 @@ from sdk import Volume
 def main(args):
     # Set up the connection to OpenStack -- this is read from clouds.yaml
     openstack.enable_logging(debug=False)
-    api = openstack.connect(cloud='fuga')
+    api = openstack.connect(cloud=args.cloud)
 
     # Create a list of known snapshots -- we do this to limit the number
     # of API calls later on when detecting old snapshots
@@ -91,6 +91,12 @@ if __name__ == '__main__':
         help='',
         metavar=('<server>'),
         default=[],
+    )
+    parser.add_argument(
+        '--cloud',
+        help='',
+        metavar=('<cloud in clouds.yaml>'),
+        default='fuga',
     )
 
     args = parser.parse_args()
