@@ -1,0 +1,8 @@
+clouds:
+  fuga:
+    region_name: 'ams'
+    auth:
+      username: ''
+      project_id: ''
+      domain_id: ''
+      auth_url: 'https://identity.api.ams.fuga.cloud:443/v3'
