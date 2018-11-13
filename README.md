@@ -11,7 +11,7 @@ Read more about [crash consistent vs. application consistent](https://searchdata
 
 # Installation
 
-Configure your OpenStack cloud(s). The example and default is based on Fuga.
+Configure your OpenStack cloud(s). The example and default is based on [Fuga](https://fuga.cloud/).
 
 - Copy `clouds.yaml.example` to `clouds.yaml` and fill in your details.
 - Copy `secure.yaml.example` to `secure.yaml` and fill in your password.
